@@ -26,11 +26,65 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.criticSpace {
+    display: flex;
+    height: 400px;
+    width: auto;
+    justify-content: space-around;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.colori{
+    display: flex;
+    justify-content: space-around;
 }
 
 .canvas {
     background-color: rgba(240, 248, 255, 0.349);
     height: 600px;
-    width: 500px;
-
+    width: 480px;
+    flex: 1;
 }
+
+
+
+#face {
+    height: 200px;
+    border-radius: 25px;
+    align-self: flex-end;
+    opacity: 0.90;
+}
+
+#bubble {
+    height: 258px;
+    width: 295px;
+    opacity: 0.80;
+    background: url(./media/bubble1.png) ;
+}
+
+
