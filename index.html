@@ -17,7 +17,7 @@
 
         <div class="left">
 
-            <div class="canvas"></div>
+            <div class="canvas">  </div>
 
         </div>
 
@@ -35,15 +35,20 @@
             </div>
 
             <div class="settings">
-                <button id="criticOpinion"></button>
-                <button id="newCanvas"></button>
-                <input id="canvasDimension" type="range" min="1" max="100" defaultvalue="16">
+                <button id="criticOpinion">Ask for opinion</button>
+                <button id="newCanvas">New</button>
+                
+                <div class="sceltaGrandezza">
+                    <input id="canvasDimension" type="range" min="1" max="100" value="16">
+                    <label id="size-canvas" for="canvas-size"></label>
+                </div>
             </div>
 
             <div class="colori">
 
-                <button id="psyco"></button>
-                <button id="yourColor"></button>
+                <button id="psyco">Random</button>
+                <button id="chooseColor">Your color</button>
+                <input id="your-color" type="color" value="#daa520">
 
             </div>
 
