@@ -2,9 +2,13 @@ const sizeCanvas = document.querySelector("#size-canvas");
 const canvasDimensionC = document.querySelector("#canvasDimension");
 const container = document.querySelector('.canvas');
 const btnNew = document.querySelector('#newCanvas') ;
+const opinion = document.querySelector('#criticOpinion');
+const bubble =document.querySelector("#bubble");
+const face = document.querySelector('#face');
 const chooseColor = document.querySelector('#chooseColor'); //button
 const random = document.querySelector('#psyco'); //random button
 const shade = document.querySelector('#dark'); //darker button
+
 let token = '0'; // token of pickYourColor function
 let brush = false;
 let oldColor;
@@ -117,6 +121,13 @@ function pickYourColor (token) {
 
 /* ----------------------------------------------------------------- */
 
+function getBubble() {
+  let bubble =['1.png','2.png', '3.png', '4.png', '5.png','6.png', '7.png', '8.png', '9.png', '10.png'];
+  let random;
+  random = bubble[Math.floor(Math.random()*bubble.length)];
+  return random;
+}
+
 
 /* ----- Default grid ---- */
 makeGrid();
@@ -151,9 +162,11 @@ btnNew.addEventListener('click', () => {
   
         quadrato.addEventListener("mouseover", function( event ) {  
 
-          oldColor= event.target.style.backgroundColor;
-          event.target.style.backgroundColor= pickYourColor(token);
-            
+          if (brush) {
+            oldColor= event.target.style.backgroundColor;
+            event.target.style.backgroundColor= pickYourColor(token);
+        
+          }
         });
   
     });
@@ -185,5 +198,18 @@ document.querySelector('.canvas').addEventListener('click', () => {
     document.querySelector('.brush').textContent='Brush : Off';
   }
 });
+
+
+opinion.addEventListener('click', () => {
+  opinion.disabled = true;
+
+  setTimeout(function(){opinion.disabled = false;
+    face.style.animation = "none";
+    bubble.style.background= ""},5000);
+
+  face.style.animation = "shake 2s 2";
+  bubble.style.background= `url('./media/bubble/${getBubble()}')`;
+   
+})
 
 /* --------------------------------------------------------- */
