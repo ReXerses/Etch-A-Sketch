@@ -139,6 +139,7 @@ let quadrati = container.querySelectorAll(' .canvas > div > div ');
 quadrati.forEach((quadrato) => {
 
   quadrato.addEventListener("mouseover", function( event ) {  
+    
     if (brush) {
     oldColor= event.target.style.backgroundColor;
     event.target.style.backgroundColor= pickYourColor(token);
@@ -163,6 +164,7 @@ btnNew.addEventListener('click', () => {
         quadrato.addEventListener("mouseover", function( event ) {  
 
           if (brush) {
+
             oldColor= event.target.style.backgroundColor;
             event.target.style.backgroundColor= pickYourColor(token);
         
