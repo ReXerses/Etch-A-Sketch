@@ -7,7 +7,7 @@ Completare il progetto in tutti i suoi punti (anche quelli facoltativi) è stata
 un esempio potrebbe essere la manipolazione del DOM necessaria a creare delle grid della dimensione scelta dall' utente.
 
 ## Live Demo :tv:
-
+[DEMO](https://rexerses.github.io/Etch-A-Sketch/)
 
 ## Tecnologia usata :desktop_computer:
 - HTML
